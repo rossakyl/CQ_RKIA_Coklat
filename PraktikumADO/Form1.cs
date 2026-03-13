@@ -42,6 +42,7 @@ namespace PraktikumADO
             }
         }
 
+        // query untuk menghitung jumlah mahasiswa
         private void btnHitungMhs_Click(object sender, EventArgs e)
         {
             try
