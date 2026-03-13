@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 
 namespace PraktikumADO
 {
+    // Form utama praktikum command query
     public partial class Form1 : Form
     {
         SqlConnection conn;
