@@ -90,6 +90,7 @@ namespace PraktikumADO
             }
         }
 
+        // query untuk mengupdate jumlah SKS pada mata kuliah tertentu
         private void btnLatihan2_Click(object sender, EventArgs e)
         {
             try
