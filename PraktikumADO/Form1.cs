@@ -66,6 +66,7 @@ namespace PraktikumADO
             }
         }
 
+        // query untuk menghitung jumlah data dosen
         private void btnLatihan1_Click(object sender, EventArgs e)
         {
             try
