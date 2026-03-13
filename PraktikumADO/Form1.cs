@@ -135,6 +135,7 @@ namespace PraktikumADO
             }
         }
 
+        // query untuk menghitung jumlah mata kuliah
         private void btnHitungMK_Click_1(object sender, EventArgs e)
         {
             try
