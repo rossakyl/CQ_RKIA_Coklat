@@ -16,6 +16,7 @@ namespace PraktikumADO
             InitializeComponent();
         }
 
+        // method untuk membuat koneksi ke SQL Server
         private void Koneksi()
         {
             conn = new SqlConnection(
