@@ -114,6 +114,7 @@ namespace PraktikumADO
             }
         }
 
+        // query untuk menambahkan data program studi baru
         private void btnLatihan3_Click(object sender, EventArgs e)
         {
             try
