@@ -1,4 +1,5 @@
-﻿using System;
+﻿// koneksi database
+using System;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
