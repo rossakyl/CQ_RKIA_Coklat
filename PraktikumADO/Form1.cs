@@ -177,6 +177,7 @@ namespace PraktikumADO
 
                 int hasil = cmd.ExecuteNonQuery();
 
+                // menampilkan jumlah baris yang terpengaruh oleh query
                 MessageBox.Show("Jumlah baris terpengaruh : " + hasil);
 
                 conn.Close();
