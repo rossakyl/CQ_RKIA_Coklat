@@ -24,6 +24,7 @@ namespace PraktikumADO
             );
         }
 
+        // membuka koneksi ke database
         private void btnConnect_Click(object sender, EventArgs e)
         {
             try
