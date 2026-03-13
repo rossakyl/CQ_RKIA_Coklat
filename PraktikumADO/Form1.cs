@@ -67,6 +67,55 @@ namespace PraktikumADO
             }
         }
 
+        // query untuk menghitung jumlah mata kuliah
+        private void btnHitungMK_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                Koneksi();
+                conn.Open();
+
+                string query = "SELECT COUNT(*) FROM MataKuliah";
+
+                cmd = new SqlCommand(query, conn);
+
+                int jumlah = (int)cmd.ExecuteScalar();
+
+                txtHasil.Text = jumlah.ToString();
+
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        // update alamat mahasiswa
+        private void btnUpdate_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                Koneksi();
+                conn.Open();
+
+                string query = "UPDATE Mahasiswa SET Alamat='Yogyakarta' WHERE NIM='23110100001'";
+
+                cmd = new SqlCommand(query, conn);
+
+                int hasil = cmd.ExecuteNonQuery();
+
+                // menampilkan jumlah baris yang terpengaruh oleh query
+                MessageBox.Show("Jumlah baris terpengaruh : " + hasil);
+
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
         // query untuk menghitung jumlah data dosen
         private void btnLatihan1_Click(object sender, EventArgs e)
         {
@@ -139,53 +188,5 @@ namespace PraktikumADO
             }
         }
 
-        // query untuk menghitung jumlah mata kuliah
-        private void btnHitungMK_Click_1(object sender, EventArgs e)
-        {
-            try
-            {
-                Koneksi();
-                conn.Open();
-
-                string query = "SELECT COUNT(*) FROM MataKuliah";
-
-                cmd = new SqlCommand(query, conn);
-
-                int jumlah = (int)cmd.ExecuteScalar();
-
-                txtHasil.Text = jumlah.ToString();
-
-                conn.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
-        // update alamat mahasiswa
-        private void btnUpdate_Click_1(object sender, EventArgs e)
-        {
-            try
-            {
-                Koneksi();
-                conn.Open();
-
-                string query = "UPDATE Mahasiswa SET Alamat='Yogyakarta' WHERE NIM='23110100001'";
-
-                cmd = new SqlCommand(query, conn);
-
-                int hasil = cmd.ExecuteNonQuery();
-
-                // menampilkan jumlah baris yang terpengaruh oleh query
-                MessageBox.Show("Jumlah baris terpengaruh : " + hasil);
-
-                conn.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
     }
 }
