@@ -56,6 +56,7 @@ namespace PraktikumADO
 
                 int jumlah = (int)cmd.ExecuteScalar();
 
+                // menampilkan hasil perhitungan jumlah data ke textbox
                 txtHasil.Text = jumlah.ToString();
 
                 conn.Close();
